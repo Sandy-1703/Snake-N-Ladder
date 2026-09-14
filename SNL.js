@@ -15,6 +15,14 @@ for(let row=9;row>=0;row--)
         const cell = document.createElement("div");
         cell.classList.add("cell");
         cell.textContent = number;
+        if(number % 2 == 0)
+        {
+            cell.classList.add("blue");
+        }
+        else
+        {
+            cell.classList.add("yellow")
+        }
         board.appendChild(cell);
     }
 }
