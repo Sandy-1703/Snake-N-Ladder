@@ -26,3 +26,32 @@ for(let row=9;row>=0;row--)
         board.appendChild(cell);
     }
 }
+
+//Part - III Snakes & Ladders
+const snakes = {
+    99 : 6,
+    70: 51,
+    54: 48,
+    47: 27,
+    26: 5
+};
+const ladders = {
+    4 : 25,
+    13 : 46,
+    21 : 42,
+    50 : 69,
+    62 : 81
+};
+const cells = document.querySelectorAll(".cell");
+for(let cell of cells)
+{
+    let num = Number(cell.textContent);
+    if(snakes[num])
+    {
+        cell.textContent = "🐍 " + num;
+    }
+    else if(ladders[num])
+    {
+        cell.textContent = "🪜 " + num;
+    }
+}
